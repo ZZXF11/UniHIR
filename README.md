@@ -21,6 +21,8 @@ The original data of the dataset is sourced from public channels such as the Int
 ## 📏 Evaluation Result
 ![Vis_3](fig/eval.png)
 
+## 🌄 Visualization
+![vis_4](fig/vis1.png)
 
 ## 📅 News
 - **2026.4.05**: 🎉🎉 Our [paper](https://aclanthology.org/2026.acl-long.1254/) is accepted by ACL Main.
@@ -59,5 +61,5 @@ If you find PosterVerse helpful, please consider giving this repo a ⭐ and citi
 ```
 Thanks for your support!
 
-## 🌄 Visualization
-![vis_4](fig/vis1.png)
+## ⭐ Star Rising
+[![Star Rising](https://api.star-history.com/svg?repos=ZZXF11/UniHIR&type=Timeline)](https://star-history.com/#ZZXF11/UniHIR&Timeline)
