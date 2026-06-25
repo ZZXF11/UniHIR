@@ -8,3 +8,53 @@
 The original data of the dataset is sourced from public channels such as the Internet, and its copyright shall remain with the original providers. The collated and annotated dataset presented in this case is for non-commercial use only and is currently licensed to universities and research institutions. To apply for the use of this dataset, please fill in the corresponding application form in accordance with the requirements specified on the dataset’s official website. The applicant must be a full-time employee of a university or research institute and is required to sign the application form. For the convenience of review, it is recommended to affix an official seal (a seal of a secondary-level department is acceptable).
 
 ## 🌟 Highlights
+- **UniHIR**
+![Vis_1](fig/unihir_pipeline.png)
+- **HIRBench**
+![Vis_2](fig/hirbench.png)
+
+- We propose **UniHIR**, a pioneering Unified MLLM for end-to-end HIR, offering a new perspective on HIR.
+- UniHIR incorporates two novel designs, Draft-Guided Localization and Hierarchical Self-Refinement, to support iterative reasoning and self-correction for HIR.
+- We propose UHIRFactory and construct **HIRBench** to enable step-wise, memory efficient training of UniHIR.
+- Extensive experiments demonstrate that our method achieves superior restored-text accuracy and generation quality.
+
+## 📏 Evaluation Result
+![Vis_3](fig/eval.png)
+
+
+## 📅 News
+
+
+
+
+## 🚧 TODO List
+
+
+## 💙 Acknowledgement
+
+
+
+
+## 📜 License
+The code and dataset should be used and distributed under [(CC BY-NC-ND 4.0)](https://creativecommons.org/licenses/by-nc-nd/4.0/) for non-commercial research purposes.
+
+## ⛔️ Copyright
+- This repository can only be used for non-commercial research purposes.
+- For commercial use, please contact Prof. Lianwen Jin (eelwjin@scut.edu.cn).
+- Copyright 2026, [Deep Learning and Vision Computing Lab (DLVC-Lab)](http://www.dlvc-lab.net), South China University of Technology. 
+
+## ✒️Citation
+If you find PosterVerse helpful, please consider giving this repo a ⭐ and citing:
+```latex
+@inproceedings{zhang2026uniitr,
+    title = {Draft, Verify, Restore: Self-Refining Historical Inscription Restoration with a Unified {MLLM}},
+    author = {Yuyi Zhang, Junle Liu, Peirong Zhang, Jianliang Liu, Zhenhua Yang, Lianwen Jin},
+    year={2026},  
+    booktitle = {Proceedings of the 64th Annual Meeting of the {A}ssociation for {C}omputational {L}inguistics (Volume 1: Long Papers)},
+    url = {https://aclanthology.org/2026.acl-long.1254/},
+    pages = {27216--27231},
+}
+```
+Thanks for your support!
+
+## 🌄 Gallery
