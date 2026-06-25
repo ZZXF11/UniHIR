@@ -1,6 +1,6 @@
 <div align=center>
 
-# Draft, Verify, Restore: Self-Refining Historical Inscription Restoration with a Unified MLLM
+# [ACL 2026 main] Draft, Verify, Restore: Self-Refining Historical Inscription Restoration with a Unified MLLM
 
 </div>
 
@@ -23,15 +23,17 @@ The original data of the dataset is sourced from public channels such as the Int
 
 
 ## 📅 News
-
-
+- **2026.4.05**: 🎉🎉 Our [paper](https://aclanthology.org/2026.acl-long.1254/) is accepted by ACL Main.
 
 
 ## 🚧 TODO List
 
+- [ ] Release inference code
+- [ ] Release pretrained model
+- [ ] Release dataset
 
 ## 💙 Acknowledgement
-
+- [BAGEL](https://github.com/bytedance-seed/BAGEL)
 
 
 
@@ -46,15 +48,16 @@ The code and dataset should be used and distributed under [(CC BY-NC-ND 4.0)](ht
 ## ✒️Citation
 If you find PosterVerse helpful, please consider giving this repo a ⭐ and citing:
 ```latex
-@inproceedings{zhang2026uniitr,
-    title = {Draft, Verify, Restore: Self-Refining Historical Inscription Restoration with a Unified {MLLM}},
+@inproceedings{zhang2026unihir,
+    title = {Draft, Verify, Restore: Self-Refining Historical Inscription Restoration with a Unified MLLM},
     author = {Yuyi Zhang, Junle Liu, Peirong Zhang, Jianliang Liu, Zhenhua Yang, Lianwen Jin},
     year={2026},  
-    booktitle = {Proceedings of the 64th Annual Meeting of the {A}ssociation for {C}omputational {L}inguistics (Volume 1: Long Papers)},
+    booktitle = {Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
     url = {https://aclanthology.org/2026.acl-long.1254/},
     pages = {27216--27231},
 }
 ```
 Thanks for your support!
 
-## 🌄 Gallery
+## 🌄 Visualization
+![vis_4](fig/vis1.png.png)
