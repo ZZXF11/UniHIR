@@ -60,4 +60,4 @@ If you find PosterVerse helpful, please consider giving this repo a ⭐ and citi
 Thanks for your support!
 
 ## 🌄 Visualization
-![vis_4](fig/vis1.png.png)
+![vis_4](fig/vis1.png)
