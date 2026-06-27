@@ -54,7 +54,7 @@ The original data of the dataset is sourced from public channels such as the Int
 
 
 **Note:**
-- The HIRBench can only be used for non-commercial research purposes. Scholars or organizations who wish to use the MegaHan97K dataset can apply through our online platform:  👉 [Apply Here](http://121.41.49.212:9000/)
+- The HIRBench can only be used for non-commercial research purposes. Scholars or organizations who wish to use the HIRBench can apply through our online platform:  👉 [Apply Here](http://121.41.49.212:9000/)
 - We will give you the decompression password after your application has been received and approved.
 - All users must follow all use conditions; otherwise, the authorization will be revoked.
 
