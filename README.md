@@ -36,7 +36,10 @@ The original data of the dataset is sourced from public channels such as the Int
 
 ## 💙 Acknowledgement
 - [BAGEL](https://github.com/bytedance-seed/BAGEL)
-
+- [AutoHDR](https://github.com/QwenLM/Qwen3)
+- [DiffHDR](https://github.com/yeungchenwa/HDR)
+- [HisDoc1B](https://github.com/SCUT-DLVCLab/HisDoc1B)
+- [MegaHan97K](https://github.com/SCUT-DLVCLab/MegaHan97K)
 
 
 ## 📜 License
@@ -50,13 +53,11 @@ The code and dataset should be used and distributed under [(CC BY-NC-ND 4.0)](ht
 ## ✒️Citation
 If you find PosterVerse helpful, please consider giving this repo a ⭐ and citing:
 ```latex
-@inproceedings{zhang2026unihir,
-    title = {Draft, Verify, Restore: Self-Refining Historical Inscription Restoration with a Unified MLLM},
-    author = {Yuyi Zhang, Junle Liu, Peirong Zhang, Jianliang Liu, Zhenhua Yang, Lianwen Jin},
-    year={2026},  
-    booktitle = {Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)},
-    url = {https://aclanthology.org/2026.acl-long.1254/},
-    pages = {27216--27231},
+@article{zhang2026unihir,
+      title={Draft, Verify, Restore: Self-Refining Historical Inscription Restoration with a Unified MLLM}, 
+      author={Yuyi Zhang, Junle Liu, Peirong Zhang, Jianliang Liu, Zhenhua Yang, Lianwen Jin},
+      journal={Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics},
+      year={2026},
 }
 ```
 Thanks for your support!
