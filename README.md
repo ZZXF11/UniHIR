@@ -1,6 +1,15 @@
 <div align=center>
 
-# [ACL 2026 main] Draft, Verify, Restore: Self-Refining Historical Inscription Restoration with a Unified MLLM
+# Draft, Verify, Restore: Self-Refining Historical Inscription Restoration with a Unified MLLM
+
+</div>
+
+<div align=center>
+
+[![GitHub ZZXF11](https://img.shields.io/badge/GitHub-ZZXF11-blueviolet?logo=github)](https://github.com/ZZXF11)
+[![SCUT DLVC Lab](https://img.shields.io/badge/SCUT-DLVC_Lab-327FE6?logo=Academia&logoColor=white)](http://dlvc-lab.net/lianwen/)
+[![Code](https://img.shields.io/badge/Code-UniHIR-yellow)](https://github.com/ZZXF11/UniHIR)
+<!-- [![Homepage](https://img.shields.io/badge/Homepage-UniHIR-green)]([https://](https://github.com/ZZXF11/UniHIR)) -->
 
 </div>
 
@@ -33,6 +42,21 @@ The original data of the dataset is sourced from public channels such as the Int
 - [ ] Release inference code
 - [ ] Release pretrained model
 - [ ] Release dataset
+
+## 📺 Inference
+
+## 🔥 HIRBench
+| **Dataset**             | **Link** | **status** |
+|----------|----------|-------------|
+| HIRBench-DGL | - | todo |
+| HIRBench-HSR | - | todo |
+| HIRBench-AR | - | todo |
+
+
+**Note:**
+- The HIRBench can only be used for non-commercial research purposes. Scholars or organizations who wish to use the MegaHan97K dataset can apply through our online platform:  👉 [Apply Here](http://121.41.49.212:9000/)
+- We will give you the decompression password after your application has been received and approved.
+- All users must follow all use conditions; otherwise, the authorization will be revoked.
 
 ## 💙 Acknowledgement
 - [BAGEL](https://github.com/bytedance-seed/BAGEL)
