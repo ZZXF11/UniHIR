@@ -119,7 +119,7 @@ The code and dataset should be used and distributed under [(CC BY-NC-ND 4.0)](ht
 - Copyright 2026, [Deep Learning and Vision Computing Lab (DLVC-Lab)](http://www.dlvc-lab.net), South China University of Technology. 
 
 ## ✒️Citation
-If you find PosterVerse helpful, please consider giving this repo a ⭐ and citing:
+If you find UniHIR helpful, please consider giving this repo a ⭐ and citing:
 ```latex
 @article{zhang2026unihir,
       title={Draft, Verify, Restore: Self-Refining Historical Inscription Restoration with a Unified MLLM}, 
