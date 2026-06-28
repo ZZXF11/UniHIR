@@ -40,8 +40,8 @@ The original data of the dataset is sourced from public channels such as the Int
 ## 🚧 TODO List
 
 - [x] Release inference code
-- [ ] Release pretrained model
-- [ ] Release dataset
+- [x] Release UniHIR model
+- [ ] Release HIRBench
 
 ## 🚧 Installation
 Clone this repo:
@@ -65,7 +65,7 @@ pip install -r requirements.txt
 
 ## 📺 Inference
 
-**Step 1**: Download the pretrained model from [ModelScope](https://www.modelscope.cn/models/zzxfzyy/UniHIR) or [Hugging Face](https://huggingface.co/ZZXF11/UniHIR).
+**Step 1**: Download the pretrained model from [ModelScope](https://www.modelscope.cn/models/zzxfzyy/UniHIR) or [Hugging Face](https://www.modelscope.cn/models/zzxfzyy/UniHIR).
 
 **Step 2**: Run inference:
 ```bash
