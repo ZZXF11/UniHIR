@@ -65,7 +65,7 @@ pip install -r requirements.txt
 
 ## 📺 Inference
 
-**Step 1**: Download the pretrained model from [Hugging Face](https://huggingface.co/ZZXF11/UniHIR).
+**Step 1**: Download the pretrained model from [ModelScope](https://www.modelscope.cn/models/zzxfzyy/UniHIR) or [Hugging Face](https://huggingface.co/ZZXF11/UniHIR).
 
 **Step 2**: Run inference:
 ```bash
