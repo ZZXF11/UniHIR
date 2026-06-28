@@ -73,26 +73,25 @@ if __name__ == '__main__':
         '--img_path',
         type=str,
         default='examples/FS_12_159_2.jpg',
-        help='img_path'
+        help='Path to input damaged historical document image'
     )
     parser.add_argument(
         '--ref_count',
         type=int,
         default=6,
-        help='Number of Refinement'
+        help='Number of refinement iterations (default: 6)'
     )
     parser.add_argument(
         '--save_path',
         type=str,
         default='./results',
-        help='Path to save inference results'
+        help='Directory to save inference results'
     )
     parser.add_argument(
         '--model_path',
         type=str,
         default='./UniHIR',
-        help='Path to the pretrained model directory'
+        help='Path to the pretrained UniHIR model directory'
     )
     args = parser.parse_args()
-
     main(args)

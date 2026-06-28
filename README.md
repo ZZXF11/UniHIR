@@ -6,9 +6,11 @@
 
 <div align=center>
 
+[![Paper](https://img.shields.io/badge/Paper-ACL2026-ff6b6b)](https://aclanthology.org/2026.acl-long.1254/)
 [![GitHub ZZXF11](https://img.shields.io/badge/GitHub-ZZXF11-blueviolet?logo=github)](https://github.com/ZZXF11)
 [![SCUT DLVC Lab](https://img.shields.io/badge/SCUT-DLVC_Lab-327FE6?logo=Academia&logoColor=white)](http://dlvc-lab.net/lianwen/)
 [![Code](https://img.shields.io/badge/Code-UniHIR-yellow)](https://github.com/ZZXF11/UniHIR)
+
 <!-- [![Homepage](https://img.shields.io/badge/Homepage-UniHIR-green)]([https://](https://github.com/ZZXF11/UniHIR)) -->
 
 </div>
@@ -34,23 +36,65 @@ The original data of the dataset is sourced from public channels such as the Int
 ![vis_4](fig/vis1.png)
 
 ## 📅 News
-- **2026.4.05**: 🎉🎉 Our [paper](https://aclanthology.org/2026.acl-long.1254/) is accepted by ACL Main.
+- **2026.07.05**: 🎉🎉 Our [paper](https://aclanthology.org/2026.acl-long.1254/) is accepted by ACL Main.
 
 
 ## 🚧 TODO List
 
-- [ ] Release inference code
+- [x] Release inference code
 - [ ] Release pretrained model
 - [ ] Release dataset
 
+## 🚧 Installation
+Clone this repo:
+```bash
+git clone https://github.com/ZZXF11/UniHIR
+cd UniHIR
+```
+
+**Step 0**: Download and install Miniconda from the [official website](https://docs.conda.io/en/latest/miniconda.html).
+
+**Step 1**: Create a conda environment and activate it.
+```bash
+conda create -n unihir python=3.10 -y
+conda activate unihir
+```
+
+**Step 2**: Install the required packages.
+```bash
+pip install -r requirements.txt
+```
+
 ## 📺 Inference
 
+**Step 1**: Download the pretrained model from Hugging Face.
+
+**Step 2**: Run inference:
+```bash
+CUDA_VISIBLE_DEVICES=<gpu_id> python infer.py \
+    --img_path examples/FS_12_159_2.jpg \
+    --ref_count 6 \
+    --save_path ./results \
+    --model_path ./UniHIR
+```
+
+### Arguments
+
+| Argument | Type | Default | Description |
+|----------|------|---------|-------------|
+| `--img_path` | str | `examples/FS_12_159_2.jpg` | Path to input damaged historical document image |
+| `--ref_count` | int | `6` | Number of refinement iterations |
+| `--save_path` | str | `./results` | Directory to save inference results |
+| `--model_path` | str | `./UniHIR` | Path to the pretrained UniHIR model directory |
+
+
+
 ## 🔥 HIRBench
-| **Dataset**             | **Link** | **status** |
-|----------|----------|-------------|
-| HIRBench-DGL | - | todo |
-| HIRBench-HSR | - | todo |
-| HIRBench-AR | - | todo |
+| Dataset | Description | Link | Status |
+|---------|-------------|------|--------|
+| HIRBench-DGL | Draft-Guided Localization | [Download](#) | 🚧 Coming soon |
+| HIRBench-HSR | Hierarchical Self-Refinement | [Download](#) | 🚧 Coming soon |
+| HIRBench-AR | Appearance Restoration | [Download](#) | 🚧 Coming soon |
 
 
 **Note:**
