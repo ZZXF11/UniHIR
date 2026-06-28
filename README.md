@@ -11,8 +11,6 @@
 [![SCUT DLVC Lab](https://img.shields.io/badge/SCUT-DLVC_Lab-327FE6?logo=Academia&logoColor=white)](http://dlvc-lab.net/lianwen/)
 [![Code](https://img.shields.io/badge/Code-UniHIR-yellow)](https://github.com/ZZXF11/UniHIR)
 
-<!-- [![Homepage](https://img.shields.io/badge/Homepage-UniHIR-green)]([https://](https://github.com/ZZXF11/UniHIR)) -->
-
 </div>
 
 ## Important Note
@@ -24,7 +22,7 @@ The original data of the dataset is sourced from public channels such as the Int
 - **HIRBench**
 ![Vis_2](fig/hirbench.png)
 
-- We propose **UniHIR**, a pioneering Unified MLLM for end-to-end HIR, offering a new perspective on HIR.
+- We propose **UniHIR**, a pioneering Unified MLLM for end-to-end Historical Inscription Restoration (HIR), offering a new perspective on HIR.
 - UniHIR incorporates two novel designs, Draft-Guided Localization and Hierarchical Self-Refinement, to support iterative reasoning and self-correction for HIR.
 - We propose UHIRFactory and construct **HIRBench** to enable step-wise, memory efficient training of UniHIR.
 - Extensive experiments demonstrate that our method achieves superior restored-text accuracy and generation quality.
@@ -67,7 +65,7 @@ pip install -r requirements.txt
 
 ## 📺 Inference
 
-**Step 1**: Download the pretrained model from Hugging Face.
+**Step 1**: Download the pretrained model from [Hugging Face](https://huggingface.co/ZZXF11/UniHIR).
 
 **Step 2**: Run inference:
 ```bash
@@ -77,6 +75,8 @@ CUDA_VISIBLE_DEVICES=<gpu_id> python infer.py \
     --save_path ./results \
     --model_path ./UniHIR
 ```
+
+> **Note**: We recommend using a GPU with 80GB VRAM (e.g., NVIDIA A100) for inference.
 
 ### Arguments
 
@@ -104,7 +104,7 @@ CUDA_VISIBLE_DEVICES=<gpu_id> python infer.py \
 
 ## 💙 Acknowledgement
 - [BAGEL](https://github.com/bytedance-seed/BAGEL)
-- [AutoHDR](https://github.com/QwenLM/Qwen3)
+- [AutoHDR](https://github.com/SCUT-DLVCLab/AutoHDR)
 - [DiffHDR](https://github.com/yeungchenwa/HDR)
 - [HisDoc1B](https://github.com/SCUT-DLVCLab/HisDoc1B)
 - [MegaHan97K](https://github.com/SCUT-DLVCLab/MegaHan97K)
