@@ -13,11 +13,11 @@
 [![License](https://img.shields.io/badge/License-CC_BY--NC--ND_4.0-green)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 [![GitHub stars](https://img.shields.io/github/stars/ZZXF11/UniHIR?style=social)](https://github.com/ZZXF11/UniHIR)
 
-**Yuyi Zhang<sup>*</sup> · Junle Liu<sup>*</sup> · Peirong Zhang<sup>*</sup> · Jianliang Liu · Zhenhua Yang · Lianwen Jin<sup>†</sup>**
+**Yuyi Zhang<sup>&#42;</sup> · Junle Liu<sup>&#42;</sup> · Peirong Zhang<sup>&#42;</sup> · Jianliang Liu · Zhenhua Yang · Lianwen Jin<sup>†</sup>**
 
 South China University of Technology · Deep Learning and Vision Computing Lab
 
-<sup>*</sup> Equal contribution &nbsp;&nbsp; <sup>†</sup> Corresponding author
+<sup>&#42;</sup> Equal contribution &nbsp;&nbsp; <sup>†</sup> Corresponding author
 
 </div>
 

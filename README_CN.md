@@ -12,11 +12,11 @@
 [![Python](https://img.shields.io/badge/Python-3.10-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![License](https://img.shields.io/badge/License-CC_BY--NC--ND_4.0-green)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
-**张宇一<sup>*</sup> · 刘俊乐<sup>*</sup> · 张培荣<sup>*</sup> · 刘建良 · 杨振华 · 金连文<sup>†</sup>**
+**张宇一<sup>&#42;</sup> · 刘俊乐<sup>&#42;</sup> · 张培荣<sup>&#42;</sup> · 刘建良 · 杨振华 · 金连文<sup>†</sup>**
 
 华南理工大学 · 深度学习与视觉计算实验室
 
-<sup>*</sup> 共同一作 &nbsp;&nbsp; <sup>†</sup> 通讯作者
+<sup>&#42;</sup> 共同一作 &nbsp;&nbsp; <sup>†</sup> 通讯作者
 
 </div>
 
