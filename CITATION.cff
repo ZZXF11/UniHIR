@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+message: "If you use UniHIR in your research, please cite our ACL 2026 paper."
+title: "Draft, Verify, Restore: Self-Refining Historical Inscription Restoration with a Unified MLLM"
+type: software
+authors:
+  - family-names: Zhang
+    given-names: Yuyi
+  - family-names: Liu
+    given-names: Junle
+  - family-names: Zhang
+    given-names: Peirong
+  - family-names: Liu
+    given-names: Jianliang
+  - family-names: Yang
+    given-names: Zhenhua
+  - family-names: Jin
+    given-names: Lianwen
+repository-code: "https://github.com/ZZXF11/UniHIR"
+url: "https://aclanthology.org/2026.acl-long.1254/"
+license: CC-BY-NC-ND-4.0
+preferred-citation:
+  type: conference-paper
+  title: "Draft, Verify, Restore: Self-Refining Historical Inscription Restoration with a Unified MLLM"
+  authors:
+    - family-names: Zhang
+      given-names: Yuyi
+    - family-names: Liu
+      given-names: Junle
+    - family-names: Zhang
+      given-names: Peirong
+    - family-names: Liu
+      given-names: Jianliang
+    - family-names: Yang
+      given-names: Zhenhua
+    - family-names: Jin
+      given-names: Lianwen
+  collection-title: "Proceedings of the 64th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)"
+  publisher: "Association for Computational Linguistics"
+  year: 2026
+  month: 7
+  start: 27216
+  end: 27231
+  doi: "10.18653/v1/2026.acl-long.1254"
+  url: "https://aclanthology.org/2026.acl-long.1254/"
+

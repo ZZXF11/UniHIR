@@ -1,0 +1,27 @@
+__pycache__/
+*.py[cod]
+*.so
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Local environments and credentials
+.env
+.env.*
+.venv/
+venv/
+env/
+
+# Model weights and generated outputs
+UniHIR/
+checkpoints/
+outputs/
+results/
+*.ckpt
+*.pt
+*.pth
+*.safetensors
