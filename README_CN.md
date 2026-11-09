@@ -51,8 +51,8 @@ UniHIR 将传统的任务分离式流水线统一为一个模型，并完成三�
 |---|---|---|
 | 论文 | [ACL Anthology](https://aclanthology.org/2026.acl-long.1254/) · [PDF](https://aclanthology.org/2026.acl-long.1254.pdf) | 已发布 |
 | UniHIR 预训练模型 | [ModelScope](https://www.modelscope.cn/models/zzxfzyy/UniHIR) | 已发布 |
-| 推理代码 | [本仓库](https://github.com/ZZXF11/UniHIR) | 已发布 |
-| HIRBench | [申请入口](http://121.41.49.212:9000/) | 可申请获取 |
+| 推理代码 | [`infer.py`](./infer.py) | 已发布 |
+| HIRBench | 👉 [点击申请](http://121.41.49.212:9000/) | 可申请获取 |
 
 ## 🚀 快速开始
 

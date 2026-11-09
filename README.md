@@ -54,8 +54,8 @@ UniHIR replaces task-separated restoration pipelines with a single model that pe
 |---|---|---|
 | Paper | [ACL Anthology](https://aclanthology.org/2026.acl-long.1254/) · [PDF](https://aclanthology.org/2026.acl-long.1254.pdf) | Available |
 | Pretrained UniHIR | [ModelScope](https://www.modelscope.cn/models/zzxfzyy/UniHIR) | Available |
-| Inference code | [This repository](https://github.com/ZZXF11/UniHIR) | Available |
-| HIRBench | [Application portal](http://121.41.49.212:9000/) | Available upon application |
+| Inference code | [`infer.py`](./infer.py) | Available |
+| HIRBench | 👉 [Apply Here](http://121.41.49.212:9000/) | Available upon application |
 
 ## 🚀 Quick Start
 
