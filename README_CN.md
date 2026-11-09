@@ -52,7 +52,7 @@ UniHIR 将传统的任务分离式流水线统一为一个模型，并完成三�
 | 论文 | [ACL Anthology](https://aclanthology.org/2026.acl-long.1254/) · [PDF](https://aclanthology.org/2026.acl-long.1254.pdf) | 已发布 |
 | UniHIR 预训练模型 | [ModelScope](https://www.modelscope.cn/models/zzxfzyy/UniHIR) | 已发布 |
 | 推理代码 | [本仓库](https://github.com/ZZXF11/UniHIR) | 已发布 |
-| HIRBench | [申请入口](http://121.41.49.212:9000/) | 发布中 |
+| HIRBench | [申请入口](http://121.41.49.212:9000/) | 可申请获取 |
 
 ## 🚀 快速开始
 
@@ -98,13 +98,55 @@ CUDA_VISIBLE_DEVICES=0 python infer.py \
 
 <p align="center"><img src="fig/hirbench.png" alt="HIRBench 任务设计" width="100%"></p>
 
-| 子集 | 任务 | 发布状态 |
-|---|---|---|
-| HIRBench-DGL | 草稿引导定位 | 即将发布 |
-| HIRBench-HSR | 层级自迭代 | 即将发布 |
-| HIRBench-AR | 外观修复 | 即将发布 |
+HIRBench 包含三个子集，分别为草稿引导定位（HIRBench-DGL）、层级自迭代（HIRBench-HSR）和外观修复（HIRBench-AR）。
 
-HIRBench 仅限非商业科研使用。高校和科研机构的申请人可通过[在线申请入口](http://121.41.49.212:9000/)提交申请。审核通过后将获得数据压缩密码，使用者须遵守全部数据使用条款。
+### 数据申请与负责任使用
+
+原始数据来自互联网等公开渠道，相关版权归原始提供方所有。整理和标注后的 HIRBench 数据集仅限非商业科研用途，目前仅向高校及科研机构授权。
+
+- 请通过实验室在线平台提交本人签署的申请表。申请人须为高校或科研机构的全职工作人员。为方便审核，建议加盖单位公章，二级部门公章亦可。[点击申请](http://121.41.49.212:9000/)
+- 提交申请时，请列出或附上近 6 年内的 1–2 篇论文，以说明您或您的团队从事 OCR、历史文档分析与修复、文档图像处理等相关研究。
+- 申请通过审核后，我们将提供数据集下载链接。
+- 所有用户均须遵守数据集使用条件，否则授权将被撤销。
+
+<details>
+<summary><strong>数据目录与样本格式</strong></summary>
+
+数据集提供原始目录和 ZIP 压缩包两种下载形式。任选一种下载，保留文件名与目录结构。若下载压缩包，按下表选择文件，统一解压到 `HIRBench/`，并单独下载 `dataset_info.json`。
+
+| 子集 | 标注压缩包 | 图片压缩包 |
+|---|---|---|
+| DGL | `HIRBench-DGL.zip` | `images-DGL.zip` |
+| HSR | `HIRBench-HSR.zip` | `images-HSR-targets.zip` 与 `images-HSR-inputs.zip.001` 至 `.006` 全部六卷 |
+| AR | `HIRBench-AR.zip` | `images-AR.zip.001` 至 `.003` 全部三卷 |
+
+同组分卷放在同一目录，从 `.001` 开始解压。解压后的结构如下。
+
+```text
+HIRBench/
+├── dataset_info.json
+├── HIRBench-DGL/{real,syn}/         # JSON 标注
+├── HIRBench-HSR/                   # JSON 标注
+├── HIRBench-AR/{real,syn,inscription_synthesis}/
+└── images/
+    ├── DGL/{real,syn}/{inputs,targets}/
+    ├── HSR/{inputs,targets}/
+    ├── AR/{real,syn}/{inputs,drafts,targets}/
+    └── AR/inscription_synthesis/{drafts,targets}/
+```
+
+大括号表示多个独立子目录。每个 UTF-8 JSON 文件对应一条样本。`conversations` 保存对话消息，每条含 `from`（`human` 为指令，`gpt` 为监督回答）与 `value`（文本内容）。`images` 按任务顺序列出图片路径。**图片路径相对于该 JSON 文件所在目录**，例如 `sample_path.parent / sample["images"][0]`。
+
+| 子集 | `images` 中的图片顺序 |
+|---|---|
+| DGL | 输入页面 → 定位草稿目标图 |
+| HSR | 含噪检测草稿 → 精修草稿目标图 |
+| AR（`real`、`syn`） | 输入页面 → 字符草稿 → 修复目标图 |
+| AR（`inscription_synthesis`） | 字符草稿 → 重复引用同一草稿 → 修复目标图 |
+
+各任务的最后一张图均为监督目标。DGL 和 HSR 的框坐标归一化至 0–1000，格式为 `<|box_start|>x1,y1,x2,y2,character<|box_end|>`。本次仅发布训练数据，样本统计见 `dataset_info.json`。
+
+</details>
 
 ## 📊 实验结果
 
@@ -120,14 +162,7 @@ HIRBench 仅限非商业科研使用。高校和科研机构的申请人可通�
 
 - [x] 发布推理代码
 - [x] 发布 UniHIR 预训练模型
-- [ ] 发布 HIRBench
-- [ ] 补充低显存推理建议
-
-## ⚖️ 数据申请与负责任使用
-
-数据集原始材料来自互联网等公开渠道，其版权归原始提供者所有。本项目整理和标注的数据仅限非商业科研用途，目前仅授权高校与科研机构使用。
-
-申请人须为高校或科研机构全职工作人员，并提交本人签署的申请表。为方便审核，建议加盖单位公章，二级单位公章亦可。
+- [x] 发布 HIRBench
 
 ## 💙 致谢
 
@@ -155,7 +190,3 @@ HIRBench 仅限非商业科研使用。高校和科研机构的申请人可通�
   pages     = {27216--27231}
 }
 ```
-
-## ⭐ Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=ZZXF11/UniHIR&type=Timeline)](https://star-history.com/#ZZXF11/UniHIR&Timeline)

@@ -55,7 +55,7 @@ UniHIR replaces task-separated restoration pipelines with a single model that pe
 | Paper | [ACL Anthology](https://aclanthology.org/2026.acl-long.1254/) · [PDF](https://aclanthology.org/2026.acl-long.1254.pdf) | Available |
 | Pretrained UniHIR | [ModelScope](https://www.modelscope.cn/models/zzxfzyy/UniHIR) | Available |
 | Inference code | [This repository](https://github.com/ZZXF11/UniHIR) | Available |
-| HIRBench | [Application portal](http://121.41.49.212:9000/) | Release in progress |
+| HIRBench | [Application portal](http://121.41.49.212:9000/) | Available upon application |
 
 ## 🚀 Quick Start
 
@@ -111,13 +111,55 @@ The command saves two files in `./results`:
   <img src="fig/hirbench.png" alt="HIRBench task design" width="100%">
 </p>
 
-| Subset | Task | Release status |
-|---|---|---|
-| HIRBench-DGL | Draft-Guided Localization | Coming soon |
-| HIRBench-HSR | Hierarchical Self-Refinement | Coming soon |
-| HIRBench-AR | Appearance Restoration | Coming soon |
+HIRBench includes three subsets: HIRBench-DGL for draft-guided localization, HIRBench-HSR for hierarchical self-refinement, and HIRBench-AR for appearance restoration.
 
-HIRBench is available only for non-commercial research. University and research-institute applicants may submit a request through the [application portal](http://121.41.49.212:9000/). Approved applicants will receive the archive password and must follow all stated usage conditions.
+### Dataset Access and Responsible Use
+
+The original data come from public sources, and copyright remains with the original providers. The curated and annotated HIRBench dataset is available exclusively for non-commercial research and is licensed to universities and research institutions.
+
+- Submit a signed application through the lab’s online platform. Applicants must be full-time employees of a university or research institute. An official institutional seal is recommended to facilitate review, and a departmental seal is acceptable. [Apply Here](http://121.41.49.212:9000/)
+- List or attach one or two papers published within the past six years that show your or your team’s work on OCR, historical document analysis and restoration, document image processing, or a related area.
+- After your application is approved, we will provide the dataset download link.
+- All users must follow the dataset usage conditions. Authorization will be revoked if these conditions are violated.
+
+<details>
+<summary><strong>Dataset structure and sample format</strong></summary>
+
+The dataset is available as unpacked folders or ZIP archives. Choose either format and keep all files under the same `HIRBench/` root. If downloading archives, use the files below and download `dataset_info.json` separately.
+
+| Subset | Annotation archive | Image archives |
+|---|---|---|
+| DGL | `HIRBench-DGL.zip` | `images-DGL.zip` |
+| HSR | `HIRBench-HSR.zip` | `images-HSR-targets.zip` and all six parts of `images-HSR-inputs.zip.001`–`.006` |
+| AR | `HIRBench-AR.zip` | All three parts of `images-AR.zip.001`–`.003` |
+
+Keep all parts of each split archive together and extract starting from `.001`. The resulting layout is:
+
+```text
+HIRBench/
+├── dataset_info.json
+├── HIRBench-DGL/{real,syn}/         # Annotation JSON files
+├── HIRBench-HSR/                   # Annotation JSON files
+├── HIRBench-AR/{real,syn,inscription_synthesis}/
+└── images/
+    ├── DGL/{real,syn}/{inputs,targets}/
+    ├── HSR/{inputs,targets}/
+    ├── AR/{real,syn}/{inputs,drafts,targets}/
+    └── AR/inscription_synthesis/{drafts,targets}/
+```
+
+Braces indicate separate directories. Each UTF-8 JSON file is one sample. `conversations` contains messages with `from` (`human` for the instruction and `gpt` for the supervised response) and `value` (the message text). `images` lists image paths in task order. **Resolve paths relative to the JSON file’s directory**, for example `sample_path.parent / sample["images"][0]`.
+
+| Subset | Order in `images` |
+|---|---|
+| DGL | Input page → localization draft target |
+| HSR | Noisy detection draft → refined draft target |
+| AR (`real`, `syn`) | Input page → character draft → restored image target |
+| AR (`inscription_synthesis`) | Character draft → same draft again → restored image target |
+
+In each row, the final image is the supervision target. DGL and HSR box coordinates are normalized to 0–1000 and marked as `<|box_start|>x1,y1,x2,y2,character<|box_end|>`. This release contains training data only. See `dataset_info.json` for counts.
+
+</details>
 
 ## 📊 Results
 
@@ -137,14 +179,7 @@ HIRBench is available only for non-commercial research. University and research-
 
 - [x] Release inference code
 - [x] Release pretrained UniHIR model
-- [ ] Release HIRBench
-- [ ] Add lower-memory inference guidance
-
-## ⚖️ Dataset Access and Responsible Use
-
-The original source materials are collected from public channels, including the Internet, and their copyrights remain with the original providers. The curated and annotated dataset is intended solely for non-commercial research and is currently licensed to universities and research institutions.
-
-Applicants must be full-time employees of an eligible institution and must submit a signed application form. An official institutional seal is recommended to facilitate review; a secondary-level department seal is acceptable.
+- [x] Release HIRBench
 
 ## 💙 Acknowledgements
 
@@ -178,7 +213,3 @@ If UniHIR is useful in your research, please cite the ACL 2026 paper:
   pages     = {27216--27231}
 }
 ```
-
-## ⭐ Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=ZZXF11/UniHIR&type=Timeline)](https://star-history.com/#ZZXF11/UniHIR&Timeline)
