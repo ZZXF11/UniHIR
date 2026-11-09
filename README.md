@@ -148,16 +148,11 @@ HIRBench/
     └── AR/inscription_synthesis/{drafts,targets}/
 ```
 
-Braces indicate separate directories. Each UTF-8 JSON file is one sample. `conversations` contains messages with `from` (`human` for the instruction and `gpt` for the supervised response) and `value` (the message text). `images` lists image paths in task order. **Resolve paths relative to the JSON file’s directory**, for example `sample_path.parent / sample["images"][0]`.
+Braces indicate separate directories. Each UTF-8 JSON file is one sample. `conversations` contains messages with `from` (`human` for the instruction and `gpt` for the supervised response) and `value` (the message text). `images` lists image paths **relative to the JSON file’s directory**.
 
-| Subset | Order in `images` |
-|---|---|
-| DGL | Input page → localization draft target |
-| HSR | Noisy detection draft → refined draft target |
-| AR (`real`, `syn`) | Input page → character draft → restored image target |
-| AR (`inscription_synthesis`) | Character draft → same draft again → restored image target |
+DGL and HSR box coordinates are normalized to 0–1000 and marked as `<|box_start|>x1,y1,x2,y2,character<|box_end|>`.
 
-In each row, the final image is the supervision target. DGL and HSR box coordinates are normalized to 0–1000 and marked as `<|box_start|>x1,y1,x2,y2,character<|box_end|>`.
+> **AR training note**. The training code loads images into three slots. Both input slots use the second image in the JSON `images` list (the character draft). The third slot uses the third image as the restoration target. The first image in the list is provided for reference only.
 
 </details>
 

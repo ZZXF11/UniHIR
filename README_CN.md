@@ -135,16 +135,11 @@ HIRBench/
     └── AR/inscription_synthesis/{drafts,targets}/
 ```
 
-大括号表示多个独立子目录。每个 UTF-8 JSON 文件对应一条样本。`conversations` 保存对话消息，每条含 `from`（`human` 为指令，`gpt` 为监督回答）与 `value`（文本内容）。`images` 按任务顺序列出图片路径。**图片路径相对于该 JSON 文件所在目录**，例如 `sample_path.parent / sample["images"][0]`。
+大括号表示多个独立子目录。每个 UTF-8 JSON 文件对应一条样本。`conversations` 保存对话消息，每条含 `from`（`human` 为指令，`gpt` 为监督回答）与 `value`（文本内容）。`images` 中的图片路径**相对于该 JSON 文件所在目录**。
 
-| 子集 | `images` 中的图片顺序 |
-|---|---|
-| DGL | 输入页面 → 定位草稿目标图 |
-| HSR | 含噪检测草稿 → 精修草稿目标图 |
-| AR（`real`、`syn`） | 输入页面 → 字符草稿 → 修复目标图 |
-| AR（`inscription_synthesis`） | 字符草稿 → 重复引用同一草稿 → 修复目标图 |
+DGL 和 HSR 的框坐标归一化至 0–1000，格式为 `<|box_start|>x1,y1,x2,y2,character<|box_end|>`。
 
-各任务的最后一张图均为监督目标。DGL 和 HSR 的框坐标归一化至 0–1000，格式为 `<|box_start|>x1,y1,x2,y2,character<|box_end|>`。
+> **AR 训练备注**　训练代码按三个位置读取图像。前两个输入位置都读取 JSON 的 `images` 列表中第 2 张图（字符草稿），第 3 个位置读取第 3 张图作为修复目标。列表中的第 1 张图仅供参考。
 
 </details>
 
