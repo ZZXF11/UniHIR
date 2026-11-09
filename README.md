@@ -135,7 +135,27 @@ The dataset is available as unpacked folders or ZIP archives. Choose either form
 | HSR | `HIRBench-HSR.zip` | `images-HSR-targets.zip` and all six parts of `images-HSR-inputs.zip.001`–`.006` |
 | AR | `HIRBench-AR.zip` | All three parts of `images-AR.zip.001`–`.003` |
 
-Keep all parts of each split archive together and extract starting from `.001`. The resulting layout is:
+**Merging split archives**
+
+Download all parts of each archive into the same directory. With 7-Zip, you can open the `.001` file and extract directly into `HIRBench/`. If you need a single ZIP file, run the commands below from the directory containing the parts. Run only the command for the subset you downloaded.
+
+Linux or macOS (Bash or Zsh):
+
+```bash
+cat images-HSR-inputs.zip.{001,002,003,004,005,006} > images-HSR-inputs.zip
+cat images-AR.zip.{001,002,003} > images-AR.zip
+```
+
+Windows (Command Prompt):
+
+```cmd
+copy /b images-HSR-inputs.zip.001+images-HSR-inputs.zip.002+images-HSR-inputs.zip.003+images-HSR-inputs.zip.004+images-HSR-inputs.zip.005+images-HSR-inputs.zip.006 images-HSR-inputs.zip
+copy /b images-AR.zip.001+images-AR.zip.002+images-AR.zip.003 images-AR.zip
+```
+
+Extract the resulting ZIP with 7-Zip into the same `HIRBench/` root as the other archives. Merging requires additional disk space for the resulting ZIP.
+
+**Extracted directory layout**
 
 ```text
 HIRBench/

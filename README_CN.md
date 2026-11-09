@@ -122,7 +122,27 @@ HIRBench 包含三个子集，分别为草稿引导定位（HIRBench-DGL）、�
 | HSR | `HIRBench-HSR.zip` | `images-HSR-targets.zip` 与 `images-HSR-inputs.zip.001` 至 `.006` 全部六卷 |
 | AR | `HIRBench-AR.zip` | `images-AR.zip.001` 至 `.003` 全部三卷 |
 
-同组分卷放在同一目录，从 `.001` 开始解压。解压后的结构如下。
+**合并分卷压缩包**
+
+把同一压缩包的所有分卷下载到同一个目录。用 7-Zip 打开 `.001` 文件即可直接解压到 `HIRBench/`。如果需要先合成一个完整的 ZIP，请在分卷所在目录运行下面的命令，只执行已下载子集对应的那一行。
+
+Linux 或 macOS（Bash 或 Zsh）：
+
+```bash
+cat images-HSR-inputs.zip.{001,002,003,004,005,006} > images-HSR-inputs.zip
+cat images-AR.zip.{001,002,003} > images-AR.zip
+```
+
+Windows（命令提示符 CMD）：
+
+```cmd
+copy /b images-HSR-inputs.zip.001+images-HSR-inputs.zip.002+images-HSR-inputs.zip.003+images-HSR-inputs.zip.004+images-HSR-inputs.zip.005+images-HSR-inputs.zip.006 images-HSR-inputs.zip
+copy /b images-AR.zip.001+images-AR.zip.002+images-AR.zip.003 images-AR.zip
+```
+
+合并后，用 7-Zip 将生成的 ZIP 解压到与其他压缩包相同的 `HIRBench/` 根目录。生成完整 ZIP 需要额外的磁盘空间。
+
+**解压后的目录结构**
 
 ```text
 HIRBench/
