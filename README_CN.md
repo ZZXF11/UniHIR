@@ -1,3 +1,5 @@
+![UniHIR 项目横幅，展示草拟定位、校验纠字与铭文修复三个阶段](fig/unihir-banner-v2.png)
+
 <div align="center">
 
 # UniHIR

@@ -1,3 +1,5 @@
+![UniHIR banner illustrating draft localization, character correction, and inscription restoration](fig/unihir-banner-v2.png)
+
 <div align="center">
 
 # UniHIR
