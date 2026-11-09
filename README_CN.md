@@ -144,7 +144,7 @@ HIRBench/
 | AR（`real`、`syn`） | 输入页面 → 字符草稿 → 修复目标图 |
 | AR（`inscription_synthesis`） | 字符草稿 → 重复引用同一草稿 → 修复目标图 |
 
-各任务的最后一张图均为监督目标。DGL 和 HSR 的框坐标归一化至 0–1000，格式为 `<|box_start|>x1,y1,x2,y2,character<|box_end|>`。本次仅发布训练数据，样本统计见 `dataset_info.json`。
+各任务的最后一张图均为监督目标。DGL 和 HSR 的框坐标归一化至 0–1000，格式为 `<|box_start|>x1,y1,x2,y2,character<|box_end|>`。
 
 </details>
 
