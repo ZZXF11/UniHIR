@@ -117,7 +117,7 @@ HIRBench includes three subsets: HIRBench-DGL for draft-guided localization, HIR
 
 The original data come from public sources, and copyright remains with the original providers. The curated and annotated HIRBench dataset is available exclusively for non-commercial research and is licensed to universities and research institutions.
 
-- Submit a signed application through the lab’s online platform. Applicants must be full-time employees of a university or research institute. An official institutional seal is recommended to facilitate review, and a departmental seal is acceptable. [Apply Here](http://121.41.49.212:9000/)
+- Submit a signed application through the lab’s online platform. Applicants must be full-time employees of a university or research institute. An official institutional seal is recommended to facilitate review, and a departmental seal is acceptable. 👉 [Apply Here](http://121.41.49.212:9000/)
 - List or attach one or two papers published within the past six years that show your or your team’s work on OCR, historical document analysis and restoration, document image processing, or a related area.
 - After your application is approved, we will provide the dataset download link.
 - All users must follow the dataset usage conditions. Authorization will be revoked if these conditions are violated.
